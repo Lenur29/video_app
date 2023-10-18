@@ -16,7 +16,7 @@ export const Videos: FC<Props> = ({ videos, direction = 'row' }) => {
   return (
     <Stack direction={direction} flexWrap='wrap' justifyContent='start' gap={2}>
       {videos?.map((item, idx) => (
-        <Box key={idx} sx={{ width: { xs: '100%', sm: 'unset' }}}>
+        <Box key={idx} sx={{ width: { xs: '100%', sm: 'unset' } }}>
           {item?.id?.videoId && <VideoCard video={item} />}
           {item?.id?.channelId && <ChannelCard channelDetail={item} />}
         </Box>
@@ -24,4 +24,3 @@ export const Videos: FC<Props> = ({ videos, direction = 'row' }) => {
     </Stack>
   );
 };
-  
